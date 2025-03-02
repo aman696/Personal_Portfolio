@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-hero-bg text-hero-text font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-lg bg-white/5 border border-white/10 rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.37)];
+  }
+
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-2;
+  }
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-hero-heading to-hero-text;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Particle effect enhancements */
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.glass-card {
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.text-gradient {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Neural Network Animation Effects */
+.neural-connection {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 30s linear infinite;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.neural-node {
+  filter: url(#neural-glow);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { r: 2; opacity: 0.8; }
+  50% { r: 3; opacity: 0.3; }
+}
+/* Add to your CSS */
+.glass-card {
+  @apply relative;
+}
+
+.glass-card::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-white/5 to-transparent rounded-xl opacity-0 transition-opacity duration-300;
+}
+
+.glass-card:hover::before {
+  @apply opacity-100;
+}
+
+.glass-card::after {
+  content: '';
+  @apply absolute -inset-0.5 bg-gradient-to-r from-hero-heading/20 to-hero-text/20 rounded-xl blur opacity-0 transition-opacity duration-300;
+  z-index: -1;
+}
+
+.glass-card:hover::after {
+  @apply opacity-100;
+}
