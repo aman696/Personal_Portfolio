@@ -121,7 +121,10 @@
 .glass-card:hover::before {
   @apply opacity-100;
 }
-
+.glass-card::before,
+.glass-card::after {
+  pointer-events: none;
+}
 .glass-card::after {
   content: '';
   @apply absolute -inset-0.5 bg-gradient-to-r from-hero-heading/20 to-hero-text/20 rounded-xl blur opacity-0 transition-opacity duration-300;
