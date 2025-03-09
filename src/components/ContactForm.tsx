@@ -31,7 +31,7 @@ const InputField: React.FC<InputFieldProps> = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="w-full p-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500 text-white"
+        className="w-full p-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white"
         required={required}
       />
     </div>
@@ -64,7 +64,7 @@ const TextareaField: React.FC<TextareaFieldProps> = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="w-full p-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500 text-white"
+        className="w-full p-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white"
         rows={4}
         required={required}
       />
@@ -147,7 +147,7 @@ const Contact: React.FC = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600 transition-colors flex items-center justify-center gap-2"
+              className="w-full py-3 bg-cyan-500 text-gradient font-semibold rounded-md border border-white/20 hover:bg-cyan-600 transition-colors flex items-center justify-center gap-2"
             >
               {loading ? 'Sending...' : (
                 <>
@@ -167,3 +167,4 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
+

@@ -1,5 +1,5 @@
-import React, { FC, useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import  { FC, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import ParticleImage, { forces, PixelOptions } from "react-particle-image";
 
 /**
