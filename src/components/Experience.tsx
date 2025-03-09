@@ -1,6 +1,3 @@
-import { SiGithub } from "react-icons/si";
-import { FaExternalLinkAlt } from "react-icons/fa";
-
 const experienceData = [
   {
     role: "Software Developer Intern",
@@ -24,15 +21,7 @@ const experienceData = [
       "Created an AI Gym Tool to track exercise form, provide personalized diet plans, and generate workout routines.",
       "Utilized computer vision and machine learning to analyze real-time exercise form, improving accuracy by 25%.",
       "Designed a scalable backend with Python and MySQL to process user data and deliver tailored fitness recommendations.",
-    ],
-    githubLink: {
-      url: "https://github.com/aman696/Gymfluencer",
-      label: "View on GitHub",
-    },
-    websiteLink: {
-      url: "https://gymfluencer-seven.vercel.app",
-      label: "Visit Website",
-    },
+    ]
   },
 ];
 
@@ -66,36 +55,7 @@ const Experience = () => {
                   ))}
                 </ul>
                 {/* Links Section */}
-                {(exp.githubLink || exp.websiteLink) && (
-                  <div className="mt-4 flex flex-col sm:flex-row gap-3">
-                    {exp.githubLink && (
-                      <a
-                        href={exp.githubLink.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 py-2 px-4 bg-white/10 backdrop-blur-sm border border-white/20 font-semibold rounded-md hover:bg-white/30 transition-all shadow-md group"
-                      >
-                        <span className="text-hero-text/90 group-hover:text-hero-text">
-                          {exp.githubLink.label}
-                        </span>
-                        <SiGithub className="h-5 w-5 text-hero-text/90 group-hover:text-hero-text" />
-                      </a>
-                    )}
-                    {exp.websiteLink && (
-                      <a
-                        href={exp.websiteLink.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 py-2 px-4 bg-white/10 backdrop-blur-sm border border-white/20 font-semibold rounded-md hover:bg-white/30 transition-all shadow-md group"
-                      >
-                        <span className="text-hero-text/90 group-hover:text-hero-text">
-                          {exp.websiteLink.label}
-                        </span>
-                        <FaExternalLinkAlt className="h-4 w-4 text-hero-text/90 group-hover:text-hero-text" />
-                      </a>
-                    )}
-                  </div>
-                )}
+
               </div>
             </div>
           ))}
