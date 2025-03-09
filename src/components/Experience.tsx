@@ -20,7 +20,7 @@ const experienceData = [
     details: [
       "Created an AI Gym Tool to track exercise form, provide personalized diet plans, and generate workout routines.",
       "Utilized computer vision and machine learning to analyze real-time exercise form, improving accuracy by 25%.",
-      "Designed a scalable backend with Python and MySQL to process user data and deliver tailored fitness recommendations.",
+      "Designed a scalable backend with Python and MySQL to process user data and deliver tailored fitness recommendations, allowing it to support over 3000 simultaneous users with the help of worker clusters.",
     ]
   },
 ];
